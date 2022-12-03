@@ -34,4 +34,4 @@ request.addEventListener('load' , function(){
 }
 getCountry('nigeria')
 
-// I used the AJAX method her
+// I used the Ajax call method here
