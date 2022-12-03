@@ -11,6 +11,7 @@ request.open('GET' , `https://restcountries.com/v3.1/name/${country}`)
 request.send();
 
 request.addEventListener('load' , function(){
+    console.log(request);
     let [data] = JSON.parse(this.responseText)
     console.log(data);
 
@@ -22,7 +23,7 @@ request.addEventListener('load' , function(){
               <h4 class="country__region">${data.region}</h4>
               <p class="country__row"><span>👫</span>${(+data.population / 1000000).toFixed(1)}</p>
               <p class="country__row"><span>🗣️</span>${data.languages.eng}</p>
-              <p class="country__row"><span>💰</span>${data.currencies.NGN.name}</p>
+             <p class="country__row"><span>💰</span>${data.currencies.NGN.name}</p>
             </div>
         </article>
     `
